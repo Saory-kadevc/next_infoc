@@ -1,4 +1,5 @@
-export default funcition menu()
+export default function Menu()
 {return<>
+componentes Menu
     </>
 }

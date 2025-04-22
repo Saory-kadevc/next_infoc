@@ -1,6 +1,5 @@
-export default funcition home()
-{
+export default function Home(){
   return <>
-Monkica?
-</>
+    bem vindo ao codespaces
+  </>
 }
