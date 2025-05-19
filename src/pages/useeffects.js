@@ -5,7 +5,7 @@ export default function Useeffects() {
     const [titulo, settitulo] = useState("useeffects")
     const [numero, setNumero ] = useState(0);
     setTimeout(() => {
-            document.title = "Bem vindo ao Use-Effects"
+            document.title = 'Bem vindo ao Use-Effects:${numero}'
             settitulo(mudatitulo())
         }, 3000
     )
