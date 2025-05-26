@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
 
-export default function BasicExample{
+export default function Cadnoticia(){
 
   return (
     <Form>
