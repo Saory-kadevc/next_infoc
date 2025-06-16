@@ -1,33 +1,31 @@
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
-export default function Useeffects() {
-    const [titulo, settitulo] = useState("useeffects")
-    const [numero, setNumero ] = useState(0);
-    setTimeout(() => {
-            document.title = 'Bem vindo ao Use-Effects:${numero}'
-            settitulo(mudatitulo())
-        }, 3000
-    )
-    useEffect(()=>{
-        console.log("Titulo alterado");
-},[titulo])
+export default function Useeffect() {
+    const [titulo, setTitulo] = useState();
+    const [numero, setNumero] = useState(0);
+    setTimeout(() => { //função que aguarda segundo e executa uma alteração
+        document.title=`Bem vindo a UseEffect:${numero}`;
+        const espera = mudaTitulo();
+        setTitulo(espera);
+    }, 1000);
+    useEffect(()=>{//
+       console.log("Titulo alterado");
+    },[titulo, numero])
     return <>
         <Container className="text-center">
-            <h1>{titulo ===""?" Bem vindo":titulo} : {numero}</h1>
+            <h1>{titulo===""?"Bem Vindo":titulo} : {numero}</h1>
             <p> </p>
-            <input type="button" onClick={()=>setNumero(SomaNumero(numero))} value={"soma numero"}></input>
+            <input type="button" 
+            onClick={()=>setNumero(somaNumero(numero))} 
+            value="Soma Número"/>
         </Container>
     </>
 }
-
-function mudatitulo() {
-    return  "bem vindo ao Use-Effects";
-    
+function mudaTitulo() {
+    return "Bem Vindo a UseEffect"    
 }
- function SomaNumero(Number) {
-
-    Number++;
-return Number;
-
- }
+function somaNumero(number) {
+    number++;
+    return number;
+}

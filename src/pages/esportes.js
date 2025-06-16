@@ -1,6 +1,5 @@
-export default function esportes() {
-    return<>
-    Bem vindos aos esportes do if-dourados
+export default function Esportes() {
+    return <>
+    Bem vindos aos Esportes do IF-Dourados
     </>
-    
 }
